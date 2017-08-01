@@ -21,16 +21,20 @@ RUN sudo su root -c "debconf-set-selections <<< \"postfix postfix/main_mailer_ty
 RUN apt-get -q update     \
  && apt-get -q -y upgrade \
  && apt-get install -y -q \
-	mailutils         \
-	mysql-server-5.7  \
-	php7.0              \
-	php7.0-cli          \
-	php7.0-fpm          \
-	php7.0-gd           \
-	php7.0-mcrypt       \
-	php7.0-mysql        \
-	pwgen             \
-	nginx             \
+        mailutils         \
+        mysql-server-5.7  \
+        nginx             \
+        php7.0            \
+        php7.0-cli        \
+        php7.0-curl       \
+        php7.0-fpm        \
+        php7.0-gd         \
+        php7.0-json       \
+        php7.0-mcrypt     \
+        php7.0-mbstring   \
+        php7.0-mysql      \
+        php7.0-xml        \
+        pwgen             \
  && apt-get clean
 
 # Uninstall apache
